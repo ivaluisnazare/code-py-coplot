@@ -1,19 +1,19 @@
 # create a code that prompts the console for a string and an integer as input and returns the string repeated the specified number of times.
 def repeat_string():
-    user_string = input("Digite uma string: ")
+    user_string = input("Enter a string: ")
     try:
-        user_integer = int(input("Digite um inteiro: "))
+        user_integer = int(input("Enter with a integer: "))
     except ValueError:
-        print("Entrada inválida: inteiro esperado.")
+        print("Invalid input: expected integer. ")
         return
 
     if user_integer <= 0:
-        print("O número deve ser maior que zero.")
+        print("The number must be greater than zero. ")
         return
 
     repeated_string = " ".join([user_string] * user_integer)
 
-    print("String repetida:", repeated_string)
+    print("Repeated string: ", repeated_string)
 
 if __name__ == "__main__":
     repeat_string()
